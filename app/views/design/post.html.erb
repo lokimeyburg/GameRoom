@@ -1,0 +1,45 @@
+<div style="padding: 10px;">
+
+  <div class="panel">
+
+    <div class="panel-body">
+      <strong><%= random_title %></strong><br>
+      <span class="post-body">
+        <%= random_lipsum %>
+      </span> <br>
+      <small class="text-muted"><%= random_name %> &#183; 2m</small>
+    </div>
+
+    <div class="panel-footer">
+      <div class="media">
+        <a class="pull-left" href="/design/profile?x_push_page=true&x_page_title=Peter+Parker">
+          <img class="media-object img-circle" src="http://f.cl.ly/items/1A1V3L1F0A0G263I0R0L/4.png" width="36px">
+        </a>
+        <div class="media-body">
+          <strong class="media-heading">Peter Parker</strong> <small class="text-muted">2m</small><br>
+          Hey yeah, you should check out: <a href="http://www.reddit.com?x_external_page=true">www.reddit.com</a> for funny cat pictures.
+        </div>
+      </div>
+
+      <% [*1..3].sample.times do %>
+        <div class="media">
+          <a class="pull-left" href="/design/profile?x_push_page=true&x_page_title=Peter+Parker&x_right_button=new_post">
+            <img class="media-object img-circle" src="<%= random_avatar %>" style="width:36px;" />
+          </a>
+          <div class="media-body">
+            <strong class="media-heading"><%= random_name %></strong> <small class="text-muted">2m</small><br>
+            <%= random_lipsum %>
+          </div>
+        </div>
+      <% end %>
+
+
+      <hr>
+      <p>
+        <a class='btn btn-sm btn-block btn-success' href='/design/new_comment?x_push_page=true&x_page_title=Leave+a+Comment'>Leave a Comment</a>
+      </p>
+
+    </div>
+  </div>
+
+</div>

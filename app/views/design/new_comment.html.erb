@@ -1,0 +1,15 @@
+<div style="padding: 10px;">
+
+  <p>
+    <%= form_tag "/design/post_comment" do %>
+      <textarea class="form-control" rows="3" placeholder="Comment..."></textarea>
+      <br>
+      <%= submit_tag 'Post Comment', :class => "btn btn-sm btn-block btn-success" %>
+    <% end %>
+  </p>
+
+  <p>
+    <small class='text-muted'>This is not implemented and won't actually save a post or comment. It's here to demonstrate that Stacker will listen for redirect to pop back to the previous page.</small>
+  </p>
+
+</div>

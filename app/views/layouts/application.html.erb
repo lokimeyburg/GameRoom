@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GameRoom</title>
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application', 'https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.0/fastclick.js' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <% if params['success'] %>
+    <div class="alert alert-success" style="margin: 10px 10px 0px 10px; padding: 5px 10px;"><strong>Yay!</strong> You did something!</div>
+  <% end %>
+
+<%= yield %>
+
+
+  <script type="text/javascript">
+    window.addEventListener('load', function() {
+        FastClick.attach(document.body);
+    }, false);
+  </script>
+
+</body>
+</html>
