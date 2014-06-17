@@ -1,14 +1,14 @@
 <div style="padding: 10px;">
   <h4>Yay! A custom URL!</h4>
-  <strong>Yay! This view appeared because you triggered a custom URL.</strong>
+  <strong>This view appeared because you triggered a custom URL.</strong>
   <p>
-    Custom URLs allow you to run your own Objective-C methods.
-    Not everything can be done in the web, so it's useful to use custom actions when you need to do
-    something in native code (like taking pictures, using your GPS or just show any native ViewController).
+    Custom URLs allow you to run your own Objective-C methods. 
+    They're simple to set up and use, just checkout the documentation on how to register a custom URL with an Objective-C method.
   </p>
-
   <p>
     The URL you triggered ran a custom action called "myAction" and looked like this: <code>inapp://capture?x_action=myAction</code>
   </p>
-
+  <div class="alert alert-sm alert-warning">
+    If you need anything more advanced, like passing in arguments to an Objective-C method or listening for callbacks then use Stacker's Javascript Bridge instead.
+  </div>
 </div>
