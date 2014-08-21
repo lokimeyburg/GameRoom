@@ -27,10 +27,10 @@ module ApplicationHelper
 
   def random_avatar
     [
-      "http://f.cl.ly/items/0z460G3R3D2Q2o08460E/1.png",
-      "http://f.cl.ly/items/392l1H0l410Q0j3o3i3o/2.png",
-      "http://f.cl.ly/items/3s2X3p283g1O3l3p2n3w/3.png",
-      "http://f.cl.ly/items/1A1V3L1F0A0G263I0R0L/4.png"
+      "https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg",
+      "https://s3.amazonaws.com/uifaces/faces/twitter/dotmariusz/128.jpg",
+      "https://s3.amazonaws.com/uifaces/faces/twitter/madysondesigns/128.jpg",
+      "https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg"
     ].sample
   end
 
