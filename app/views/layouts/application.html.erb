@@ -11,11 +11,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= link_to "Sign out", destroy_user_session_path, :method => :delete if current_user.present? %>
+  
 
   <% if params['success'] %>
     <div class="alert alert-success" style="margin: 10px 10px 0px 10px; padding: 5px 10px;"><strong>Yay!</strong> You did something!</div>
   <% end %>
-
+       <%# <p class="notice"><%= notice %1></p> %>
+       <%# <p class="alert"><%= alert %1></p> %>
   <%= yield %>
 
 
