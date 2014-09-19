@@ -1,58 +1,49 @@
-
-<div style="padding: 10px; margin-top: 20px;">
-  
+<div class="welcome-panel-wrapper">
   <div class='logo-wrapper'>
-    <img class='logo'  src="https://s3.amazonaws.com/uifaces/faces/twitter/v_klimenko/128.jpg" alt="@v_klimenko">
+    <img class='logo'  src="https://s3.amazonaws.com/uifaces/faces/twitter/mrrocks/128.jpg" alt="@v_klimenko">
   </div>
-    <style>
-  
 
-    .logo-wrapper {
-      text-align: center;
-      margin-bottom: -10px;
-      }
+  <div class="panel welcome-panel">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-group">
+        <%= f.email_field :email, class: "form-control", placeholder: "Email" %>
+      </div>
+      <div class="form-group">
+        <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+      </div>
+      <div><%= f.submit "Log in", class: "btn btn-success btn-block" %></div>
+    <% end %>
+  </div>
+</div>
 
+<style>
+  .welcome-panel-wrapper {
+    padding: 10px; margin-top: 20px;
+  }  
 
-    .logo {
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      -o-border-radius: 50%;
-      border-radius: 50%;
-      border: solid 3px #FFF;
-      display: inline-block;
-      -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.25);
-      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.25);
-      border-width: 4px;
-      height: 84px;
-      width: 84px;
+  .welcome-panel {
+    padding: 15px 10px; box-shadow: 0 2px 2px 0 rgba(0,0,0,0.25);
+  }
+
+  .logo-wrapper {
+    text-align: center;
+    margin-bottom: -10px;
     }
 
-  </style>
 
-  <div class="panel" style="padding: 15px 10px; box-shadow: 0 2px 2px 0 rgba(0,0,0,0.25);">
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="form-group">
-      <%= f.email_field :email, class: "form-control", placeholder: "Email" %>
-    </div>
+  .logo {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    border: solid 3px #FFF;
+    display: inline-block;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.25);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.25);
+    border-width: 4px;
+    height: 84px;
+    width: 84px;
+  }
+</style>
 
-    <div class="form-group">
-      <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
-    </div>
-
-    <div><%= f.submit "Log in", class: "btn btn-success btn-block" %></div>
-  <% end %>
-  </div>
-
-
-  <br />
-
-  <p style='display: none;'>
-    <small class='text-muted'>
-      <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-        <%= link_to "Forgot your password?", new_password_path(resource_name) %>
-      <% end -%>
-    </small>
-  </p>
-
-</div>

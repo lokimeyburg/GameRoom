@@ -11,7 +11,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= link_to "Sign out", destroy_user_session_path, :method => :delete if current_user.present? %>
+  <%#= link_to "Sign out", destroy_user_session_path, :method => :delete if current_user.present? %>
   
 
   <% if params['success'] %>

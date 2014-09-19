@@ -1,23 +1,24 @@
-
-<div style="padding: 10px;">
-<p class="text-center">
-  <strong>Sign up for GameRoom</strong>
-</p>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-    <div class="form-group">
-      <%= f.email_field :email, class: "form-control", placeholder: "Email" %>
-    </div>
-
-
-    <div class="form-group">
-      <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
-    </div>
-
-  <div><%= f.submit "Sign up", class: "btn btn-success btn-block" %></div>
-<% end %>
+<div class="welcome-panel-wrapper">
+  <div class="panel welcome-panel">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <div class="form-group">
+        <%= f.email_field :email, class: "form-control", placeholder: "Email" %>
+      </div>
+      <div class="form-group">
+        <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+      </div>
+      <div><%= f.submit "Sign Up", class: "btn btn-success btn-block" %></div>
+    <% end %>
+  </div>
 </div>
 
 
+<style>
+  .welcome-panel-wrapper {
+    padding: 10px; margin-top: 20px;
+  }  
+
+  .welcome-panel {
+    padding: 15px 10px; box-shadow: 0 2px 2px 0 rgba(0,0,0,0.25);
+  }
+</style>
