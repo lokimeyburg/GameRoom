@@ -5,6 +5,6 @@
     <a class="list-group-item" href="">Billing Info <i class='glyphicon glyphicon-chevron-right pull-right'></i></a>
   </div>
   <div class="list-group">
-    <%= link_to "Sign out <i class='glyphicon glyphicon-chevron-right pull-right'></i>".html_safe, destroy_user_session_path, :method => :delete, :class => 'list-group-item' if current_user.present? %>
+    <%= link_to "Sign Out <i class='glyphicon glyphicon-chevron-right pull-right'></i>".html_safe, destroy_user_session_path, :method => :delete, :class => 'list-group-item' if current_user.present? %>
   </div>
 </div>
